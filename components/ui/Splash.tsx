@@ -28,7 +28,8 @@ export default function Splash({ onDismiss }: { onDismiss?: () => void }) {
     <motion.div
       className="splash-screen cursor-pointer select-none"
       onClick={onDismiss}
-      title="Click anywhere to skip intro"
+      onTouchStart={onDismiss}
+      title="Click or tap anywhere to skip intro"
       initial={{ clipPath: "inset(0 0 0% 0)" }}
       animate={{ clipPath: ["inset(0 0 0% 0)", "inset(0 0 0% 0)", "inset(0 0 100% 0)"] }}
       transition={{ duration: fast ?? 1.5, times: [0, 0.8, 1], ease: [0.76, 0, 0.24, 1] }}
