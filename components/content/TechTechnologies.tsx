@@ -1,48 +1,43 @@
 import {
-  SiLinux,
+  SiDocker,
+  SiRedis,
+  SiMongodb,
+  SiMysql,
   SiGit,
   SiGithub,
-  SiVisualstudiocode,
-  SiDocker,
-  SiAmazon,
-  SiRemix,
-  SiIpfs,
-  SiJsonwebtokens,
-  SiPostgresql,
-  SiMysql,
-  SiSqlite,
-  SiRedis,
+  SiPostman,
+  SiVercel,
+  SiLinux,
+  SiOpenai,
 } from "react-icons/si";
-import { IoCloudOutline } from "react-icons/io5";
+import { FaBrain, FaNetworkWired, FaRobot, FaServer } from "react-icons/fa6";
 
 const items = [
-  { label: "Linux", Icon: SiLinux },
-  { label: "Git", Icon: SiGit },
-  { label: "Github", Icon: SiGithub },
-  { label: "VS Code", Icon: SiVisualstudiocode },
+  { label: "LLMs & GenAI", Icon: SiOpenai },
+  { label: "AI Agents & RAG", Icon: FaRobot },
+  { label: "Anomaly Detection", Icon: FaBrain },
+  { label: "Scapy & Packets", Icon: FaNetworkWired },
   { label: "Docker", Icon: SiDocker },
-  { label: "AWS", Icon: SiAmazon },
-  { label: "OCI", Icon: IoCloudOutline },
-  { label: "PostgreSQL", Icon: SiPostgresql },
-  { label: "MySQL", Icon: SiMysql },
-  { label: "SQLite", Icon: SiSqlite },
   { label: "Redis", Icon: SiRedis },
-  { label: "Remix IDE", Icon: SiRemix },
-  { label: "REST APIs", Icon: SiJsonwebtokens },
-  { label: "IPFS", Icon: SiIpfs },
-  { label: "Smart Contracts", Icon: SiJsonwebtokens },
-  { label: "Blockchain", Icon: SiJsonwebtokens },
-  { label: "JWT Auth", Icon: SiJsonwebtokens },
-  { label: "OAuth", Icon: SiJsonwebtokens },
-  { label: "Cloud", Icon: IoCloudOutline },
+  { label: "MongoDB", Icon: SiMongodb },
+  { label: "MySQL", Icon: SiMysql },
+  { label: "REST APIs & Middleware", Icon: FaServer },
+  { label: "Git", Icon: SiGit },
+  { label: "GitHub", Icon: SiGithub },
+  { label: "Postman", Icon: SiPostman },
+  { label: "Vercel", Icon: SiVercel },
+  { label: "Linux", Icon: SiLinux },
 ];
 
 export default function TechTechnologies() {
   return (
     <div className="prose prose-invert max-w-none">
       <h3 className="text-accent font-retroSans font-extrabold text-4xl md:text-5xl">
-        Technologies
+        AI/ML, Tools &amp; Databases
       </h3>
+      <p className="text-muted text-sm mt-2">
+        Infrastructure, databases, container sandboxes, AI concepts, and developer tooling used across projects.
+      </p>
       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
         {items.map(({ label, Icon }) => (
           <div
