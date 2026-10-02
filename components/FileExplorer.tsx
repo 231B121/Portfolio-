@@ -165,7 +165,7 @@ export default function FileExplorer() {
       <section className="rounded-xl bg-panel/70 p-4 shadow-glass ring-1 ring-ring/60">
         {activePanel ?? (
           <div className="flex h-[460px] items-center justify-center text-sm text-muted">
-            Hi there! I&apos;m Harshit...
+            Hi there! I&apos;m Gourav...
           </div>
         )}
       </section>
