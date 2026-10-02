@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Harshit Gupta | Portfolio",
-  description: "Portfolio of Harshit Gupta",
+  title: "Gourav Ojha | AI/ML & Full Stack Developer Portfolio",
+  description: "Portfolio of Gourav Ojha - AI/ML Intern, Full Stack Developer, Generative AI & Anomaly Detection Specialist",
 };
 
 export default function RootLayout({
