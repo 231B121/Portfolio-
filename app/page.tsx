@@ -27,14 +27,40 @@ function findPath(items: TreeItem[], id: string, path: string[] = []): string[] 
 export default function HomePage() {
   const [ready, setReady] = useState(false);
   const [active, setActive] = useState("about-home");
-  const [open, setOpen] = useState<Record<string, boolean>>({ portfolio: true, about: true, experience: true, projects: true, "projects-extensions": true });
+  const [open, setOpen] = useState<Record<string, boolean>>({
+    portfolio: true,
+    about: true,
+    experience: true,
+    projects: true,
+    "projects-ai": true,
+    "projects-ml": true,
+    "projects-web": true,
+  });
   const reduceMotion = useReducedMotion();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const samuraiX = useSpring(mouseX, { stiffness: 45, damping: 18 });
   const samuraiY = useSpring(mouseY, { stiffness: 45, damping: 18 });
 
-  useEffect(() => { const timer = setTimeout(() => setReady(true), 5900); return () => clearTimeout(timer); }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined" && sessionStorage.getItem("portfolio_splash_seen")) {
+      setReady(true);
+      return;
+    }
+    const timer = setTimeout(() => {
+      setReady(true);
+      if (typeof window !== "undefined") sessionStorage.setItem("portfolio_splash_seen", "1");
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleDismiss = () => {
+    setReady(true);
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("portfolio_splash_seen", "1");
+    }
+  };
+
   const activeItem = useMemo(() => findItem(fileTree, active), [active]);
   const activePath = useMemo(() => findPath(fileTree, active), [active]);
   const ActiveComponent = activeItem?.component ?? null;
@@ -47,7 +73,7 @@ export default function HomePage() {
 
   return (
     <main className="archive-world" onPointerMove={handlePointer}>
-      {!ready && <Splash />}
+      {!ready && <Splash onDismiss={handleDismiss} />}
       <div className="world-sun" aria-hidden="true" />
       <div className="ink-cloud cloud-one" aria-hidden="true" />
       <div className="ink-cloud cloud-two" aria-hidden="true" />
@@ -57,12 +83,12 @@ export default function HomePage() {
       <section className="archive-shell">
         <header className="archive-titlebar">
           <div className="window-dots" aria-hidden="true"><span /><span /><span /></div>
-          <div className="archive-brand"><strong>HARSHIT GUPTA</strong></div>
+          <div className="archive-brand"><strong>GOURAV OJHA</strong></div>
           <div className="archive-actions">
-            <a href="https://github.com/linuxer77" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-            <a href="https://www.linkedin.com/in/harshit-gupta-046b66278/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="mailto:harshitgit23@gmail.com" aria-label="Email"><FaEnvelope /></a>
-            <a href="/resume.pdf" target="_blank" aria-label="Résumé"><FaFilePdf /></a>
+            <a href="https://github.com/231B121" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/gourav-ojha-aiml/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><FaLinkedinIn /></a>
+            <a href="mailto:gourav231b121@gmail.com" aria-label="Email" title="Email"><FaEnvelope /></a>
+            <a href="/resume.pdf" download="Gourav_Ojha_Resume.pdf" target="_blank" rel="noreferrer" aria-label="Download Resume" title="Download Resume"><FaFilePdf /></a>
           </div>
         </header>
         <div className="archive-toolbar"><div className="breadcrumb"><FaTerminal /> {activePath.join(" / ")}</div></div>
