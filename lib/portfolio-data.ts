@@ -8,19 +8,22 @@ export type TreeItem = {
   component?: ComponentType<any>;
 };
 
-// Content components (lazy imports can be added later for perf)
+// Content components
 import AboutContent from "@/components/content/AboutContent";
 import AboutDetails from "@/components/content/AboutDetails";
-import ProjectAlgoTrading from "@/components/content/ProjectAlgoTrading";
-import ProjectVeriCred from "@/components/content/ProjectVeriCred";
-import ProjectChessSteganography from "@/components/content/ProjectChessSteganography";
-import ConnectLinks from "@/components/content/ConnectLinks";
+import ExperienceLog from "@/components/content/ExperienceLog";
+import ProjectRepoX from "@/components/content/ProjectRepoX";
+import ProjectPacketSniffer from "@/components/content/ProjectPacketSniffer";
+import ProjectBrahmion from "@/components/content/ProjectBrahmion";
+import ProjectSchemeAdvisor from "@/components/content/ProjectSchemeAdvisor";
+import ProjectEdugen from "@/components/content/ProjectEdugen";
+import ProjectFoodOrdering from "@/components/content/ProjectFoodOrdering";
+import ProjectUrlShortener from "@/components/content/ProjectUrlShortener";
+import { EducationFile, CertificationFile } from "@/components/content/Credentials";
 import TechLanguages from "@/components/content/TechLanguages";
 import TechFrameworks from "@/components/content/TechFrameworks";
 import TechTechnologies from "@/components/content/TechTechnologies";
-import ExperienceLog from "@/components/content/ExperienceLog";
-import ProjectOverwatch from "@/components/content/ProjectOverwatch";
-import { EducationFile, CertificationFile } from "@/components/content/Credentials";
+import ConnectLinks from "@/components/content/ConnectLinks";
 
 export const fileTree: TreeItem[] = [
   {
@@ -51,7 +54,14 @@ export const fileTree: TreeItem[] = [
         id: "experience",
         name: "experience",
         type: "folder",
-        children: [{ id: "experience-log", name: "experience.md", type: "file", component: ExperienceLog }],
+        children: [
+          {
+            id: "experience-log",
+            name: "experience.md",
+            type: "file",
+            component: ExperienceLog,
+          },
+        ],
       },
       {
         id: "projects",
@@ -59,54 +69,65 @@ export const fileTree: TreeItem[] = [
         type: "folder",
         children: [
           {
-            id: "projects-extensions",
-            name: "extensions",
+            id: "projects-ai",
+            name: "ai-and-agents",
             type: "folder",
             children: [
               {
-                id: "project-overwatch",
-                name: "overwatch-ai.jsx",
+                id: "project-repox",
+                name: "repox-agent.jsx",
                 type: "file",
-                component: ProjectOverwatch,
+                component: ProjectRepoX,
               },
             ],
           },
           {
-            id: "projects-trading",
-            name: "trading",
+            id: "projects-ml",
+            name: "ml-and-security",
             type: "folder",
             children: [
               {
-                id: "project-algo-trading",
-                name: "algo-trading.jsx",
+                id: "project-packet-sniffer",
+                name: "packet-sniffer-ml.jsx",
                 type: "file",
-                component: ProjectAlgoTrading,
+                component: ProjectPacketSniffer,
+              },
+              {
+                id: "project-scheme-advisor",
+                name: "scheme-advisor.jsx",
+                type: "file",
+                component: ProjectSchemeAdvisor,
               },
             ],
           },
           {
-            id: "projects-blockchain",
-            name: "blockchain",
+            id: "projects-web",
+            name: "full-stack-web",
             type: "folder",
             children: [
               {
-                id: "project-vericred",
-                name: "vericred.jsx",
+                id: "project-brahmion",
+                name: "brahmion-spacetech.jsx",
                 type: "file",
-                component: ProjectVeriCred,
+                component: ProjectBrahmion,
               },
-            ],
-          },
-          {
-            id: "projects-other",
-            name: "other projects",
-            type: "folder",
-            children: [
               {
-                id: "project-chess-steganography",
-                name: "chess-steganography.jsx",
+                id: "project-edugen",
+                name: "edugen-quiz.jsx",
                 type: "file",
-                component: ProjectChessSteganography,
+                component: ProjectEdugen,
+              },
+              {
+                id: "project-food-ordering",
+                name: "food-ordering.jsx",
+                type: "file",
+                component: ProjectFoodOrdering,
+              },
+              {
+                id: "project-url-shortener",
+                name: "url-shortener.jsx",
+                type: "file",
+                component: ProjectUrlShortener,
               },
             ],
           },
@@ -117,8 +138,18 @@ export const fileTree: TreeItem[] = [
         name: "credentials",
         type: "folder",
         children: [
-          { id: "education", name: "education.md", type: "file", component: EducationFile },
-          { id: "certification", name: "oci-certificate.md", type: "file", component: CertificationFile },
+          {
+            id: "education",
+            name: "education.md",
+            type: "file",
+            component: EducationFile,
+          },
+          {
+            id: "certification",
+            name: "achievements.md",
+            type: "file",
+            component: CertificationFile,
+          },
         ],
       },
       {
@@ -140,7 +171,7 @@ export const fileTree: TreeItem[] = [
           },
           {
             id: "tech-technologies",
-            name: "technologies.jsx",
+            name: "tools-and-ai.jsx",
             type: "file",
             component: TechTechnologies,
           },
@@ -153,7 +184,7 @@ export const fileTree: TreeItem[] = [
         children: [
           {
             id: "connect",
-            name: "connect.jsx",
+            name: "connect-links.jsx",
             type: "file",
             component: ConnectLinks,
           },
