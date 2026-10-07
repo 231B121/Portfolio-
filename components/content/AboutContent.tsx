@@ -18,7 +18,7 @@ export default function AboutContent() {
         <div className="welcome-card-header">
           <div className="welcome-status-badge">
             <span className="live-dot" />
-            <span>OPEN FOR AI/ML INTERNSHIPS</span>
+            <span>OPEN FOR FULL STACK &amp; BACKEND ROLES</span>
           </div>
           <div className="welcome-location-badge">
             <FaLocationDot size={12} />
@@ -28,20 +28,20 @@ export default function AboutContent() {
 
         {/* Hero Identity Block */}
         <div className="welcome-hero">
-          <span className="doc-kicker">AI/ML &amp; FULL STACK DEVELOPER • CSE &apos;27</span>
+          <span className="doc-kicker">FULL STACK &amp; BACKEND DEVELOPER • CSE &apos;27</span>
           <h1 className="welcome-name">
             Gourav <em>Ojha.</em>
           </h1>
           <div className="typed-line">
             <TypeAnimation
               sequence={[
-                "AI/ML Intern & Engineer.",
-                1300,
                 "Full Stack Developer.",
                 1300,
-                "LLMs & Generative AI Builder.",
+                "Backend Developer.",
                 1300,
-                "Anomaly Detection Specialist.",
+                "React.js & TypeScript Engineer.",
+                1300,
+                "Node.js & Express API Architect.",
                 1300,
                 "300+ LeetCode Solved.",
                 1300,
@@ -58,14 +58,14 @@ export default function AboutContent() {
           <p>
             Computer Science undergraduate at{" "}
             <strong>Jaypee University of Engineering and Technology (JUET, Guna, 2023–2027)</strong>.
-            Passionate about engineering production-grade Artificial Intelligence systems, Machine
-            Learning models, and scalable Full-Stack web architectures.
+            Passionate about engineering scalable Full-Stack web architectures, robust backend
+            systems, and modern interactive user experiences.
           </p>
           <p>
-            Developed <strong>Packet Sniffer &amp; ML Anomaly Detection</strong> (unsupervised network
-            flow inspection using Isolation Forest) and <strong>RepoX</strong> (an autonomous AI coding
-            agent that analyzes GitHub repositories, detects vulnerabilities, and submits automated pull
-            requests).
+            Architected and built <strong>RepoX</strong>, a comprehensive full-stack repository analysis
+            platform and autonomous coding agent with a React dashboard, Express.js backend, and MongoDB database.
+            Automated PR workflows via the GitHub API, executed generated code tests inside isolated Docker sandboxes
+            with Redis-backed background queues, and built 5 distinct analysis engines generating health scores with severity grading.
           </p>
         </div>
 
@@ -104,15 +104,17 @@ export default function AboutContent() {
         <div className="welcome-skills-bar">
           <span className="skills-label">CORE FOCUS:</span>
           <div className="skills-chips">
-            <span>Python</span>
-            <span>Machine Learning</span>
-            <span>Isolation Forest</span>
-            <span>LLMs &amp; RAG</span>
             <span>React.js</span>
-            <span>Next.js</span>
+            <span>TypeScript</span>
             <span>Node.js</span>
+            <span>Express.js</span>
+            <span>Next.js</span>
             <span>MongoDB</span>
+            <span>REST APIs</span>
             <span>Docker</span>
+            <span>Redis</span>
+            <span>JavaScript</span>
+            <span>Python</span>
           </div>
         </div>
 
