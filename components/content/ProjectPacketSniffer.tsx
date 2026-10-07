@@ -16,14 +16,15 @@ export default function ProjectPacketSniffer() {
         A real-time network traffic monitor and unsupervised anomaly detection engine built with Python, Scapy, and Scikit-learn, featuring LLM-powered incident summaries.
       </p>
 
-      <div className="project-visual" style={{ background: "linear-gradient(135deg, #0f172a, #1e293b)", display: "flex", alignItems: "center", justifyContent: "center", gap: "24px" }}>
-        <div style={{ textAlign: "center", color: "white" }}>
-          <div style={{ display: "inline-flex", padding: "16px", borderRadius: "50%", background: "var(--indigo)", marginBottom: "8px" }}>
-            <FaNetworkWired size={36} color="white" />
+      <div className="project-visual" style={{ background: "linear-gradient(135deg, rgba(237, 233, 254, 0.9) 0%, rgba(224, 242, 254, 0.9) 50%, rgba(204, 251, 241, 0.8) 100%)", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ display: "inline-flex", padding: "14px", borderRadius: "14px", background: "rgba(255, 255, 255, 0.95)", border: "1px solid rgba(124, 114, 171, 0.25)", boxShadow: "0 4px 14px -2px rgba(124, 114, 171, 0.15)", marginBottom: "8px" }}>
+            <FaNetworkWired size={32} className="text-watercolor-lavender" />
           </div>
-          <p style={{ margin: 0, fontFamily: "var(--pixel)", fontSize: "11px", letterSpacing: "1px" }}>SCAPY PACKET SNIFFER + ISOLATION FOREST</p>
+          <p style={{ margin: 0, fontFamily: "var(--font-cambria)", fontSize: "13px", fontWeight: 700, letterSpacing: "1.5px", color: "var(--ink-primary)" }}>
+            SCAPY PACKET SNIFFER + ISOLATION FOREST
+          </p>
         </div>
-        <div className="scan-line" />
       </div>
 
       <div className="doc-grid">
