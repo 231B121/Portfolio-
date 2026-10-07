@@ -12,7 +12,7 @@ export function EducationFile() {
         <span className="ink-stamp">2027</span>
       </header>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
         <div className="credential-block">
           <span>2023 — 2027 · CURRENT</span>
           <h2>B.Tech in Computer Science and Engineering</h2>
@@ -20,14 +20,14 @@ export function EducationFile() {
           <small>Guna, Madhya Pradesh</small>
         </div>
 
-        <div className="credential-block" style={{ boxShadow: "8px 8px 0 var(--indigo)" }}>
+        <div className="credential-block">
           <span>2022 · SENIOR SECONDARY (CLASS XII)</span>
           <h2>Class XII — MP Board (80.2%)</h2>
           <p>Excellence Hr. Sec. School, Madhya Pradesh</p>
           <small>Top 10 rank in school</small>
         </div>
 
-        <div className="credential-block" style={{ boxShadow: "8px 8px 0 var(--ochre)" }}>
+        <div className="credential-block">
           <span>2020 · SECONDARY (CLASS X)</span>
           <h2>Class X — MP Board (94.5%)</h2>
           <p>Excellence Hr. Sec. School, Madhya Pradesh</p>
@@ -49,7 +49,7 @@ export function CertificationFile() {
         <span className="ink-stamp gold">300+</span>
       </header>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
         <a
           className="certificate-card"
           href="https://leetcode.com/u/231B121/"
@@ -67,27 +67,27 @@ export function CertificationFile() {
           </div>
         </a>
 
-        <div className="certificate-card" style={{ boxShadow: "9px 9px 0 var(--red)" }}>
-          <div className="certificate-mark" style={{ background: "var(--red)", color: "white" }}>
+        <div className="certificate-card">
+          <div className="certificate-mark" style={{ background: "rgba(207, 102, 121, 0.12)", color: "var(--wc-rose)", borderColor: "rgba(207, 102, 121, 0.3)" }}>
             <FaAward />
           </div>
           <div>
-            <span>National Cadet Corps</span>
+            <span style={{ color: "var(--wc-rose)" }}>National Cadet Corps</span>
             <h2>NCC &quot;A&quot; Certificate</h2>
             <p>Certified NCC Cadet exhibiting leadership, discipline, physical endurance, and team coordination.</p>
-            <strong className="certificate-link" style={{ color: "var(--ink)" }}>Verified Credential</strong>
+            <strong className="certificate-link" style={{ color: "var(--wc-rose)" }}>Verified Credential</strong>
           </div>
         </div>
 
-        <div className="certificate-card" style={{ boxShadow: "9px 9px 0 var(--indigo)" }}>
-          <div className="certificate-mark" style={{ background: "var(--indigo)", color: "white" }}>
+        <div className="certificate-card">
+          <div className="certificate-mark" style={{ background: "rgba(124, 114, 171, 0.12)", color: "var(--wc-lavender)", borderColor: "rgba(124, 114, 171, 0.3)" }}>
             <FaGraduationCap />
           </div>
           <div>
-            <span>Academic Merit</span>
+            <span style={{ color: "var(--wc-lavender)" }}>Academic Merit</span>
             <h2>Top 10 Student — Class X &amp; XII</h2>
             <p>Scored 94.5% in Class X and 80.2% in Class XII with meritorious academic standing in school.</p>
-            <strong className="certificate-link" style={{ color: "var(--ink)" }}>Academic Excellence</strong>
+            <strong className="certificate-link" style={{ color: "var(--wc-lavender)" }}>Academic Excellence</strong>
           </div>
         </div>
       </div>
