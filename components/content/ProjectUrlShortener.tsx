@@ -16,14 +16,15 @@ export default function ProjectUrlShortener() {
         A backend URL shortener and redirect analytics service engineered with Node.js, Express.js, and MongoDB, featuring fast Base62 ID hashing and click telemetry.
       </p>
 
-      <div className="project-visual" style={{ background: "linear-gradient(135deg, #0e1726, #1b2e4b)", display: "flex", alignItems: "center", justifyContent: "center", gap: "20px" }}>
-        <div style={{ textAlign: "center", color: "white" }}>
-          <div style={{ display: "inline-flex", padding: "16px", borderRadius: "50%", background: "var(--red)", marginBottom: "8px" }}>
-            <FaLink size={36} color="white" />
+      <div className="project-visual" style={{ background: "linear-gradient(135deg, rgba(237, 233, 254, 0.9) 0%, rgba(224, 242, 254, 0.9) 50%, rgba(254, 215, 170, 0.7) 100%)", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ display: "inline-flex", padding: "14px", borderRadius: "14px", background: "rgba(255, 255, 255, 0.95)", border: "1px solid rgba(124, 114, 171, 0.25)", boxShadow: "0 4px 14px -2px rgba(124, 114, 171, 0.15)", marginBottom: "8px" }}>
+            <FaLink size={32} className="text-watercolor-lavender" />
           </div>
-          <p style={{ margin: 0, fontFamily: "var(--pixel)", fontSize: "11px", letterSpacing: "1px" }}>URL COMPRESSION &amp; ANALYTICS ENGINE</p>
+          <p style={{ margin: 0, fontFamily: "var(--font-cambria)", fontSize: "13px", fontWeight: 700, letterSpacing: "1.5px", color: "var(--ink-primary)" }}>
+            URL COMPRESSION &amp; ANALYTICS ENGINE
+          </p>
         </div>
-        <div className="scan-line" />
       </div>
 
       <div className="doc-grid">
