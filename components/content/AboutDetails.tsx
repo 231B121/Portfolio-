@@ -10,21 +10,22 @@ export default function AboutDetails() {
         </div>
       </header>
       <p className="lead">
-        I&apos;m Gourav Ojha, a Computer Science & Engineering undergraduate at Jaypee University of Engineering and Technology (JUET, Guna, Batch 2023–2027) focused on Artificial Intelligence, Machine Learning, and Full Stack Engineering.
+        I&apos;m Gourav Ojha, a Computer Science & Engineering undergraduate at Jaypee University of Engineering and Technology (JUET, Guna, Batch 2023–2027) focused on Full Stack Web Development, Backend Architecture, and Modern Web Applications.
       </p>
       <div className="doc-grid">
         <section>
           <h3>What I do</h3>
           <p>
-            I build end-to-end AI applications — from training unsupervised anomaly detection models (Isolation Forest) and integrating LLM APIs & RAG agents, to developing scalable web backends with Node.js/Express and responsive frontends in React.js and TypeScript.
+            I build responsive, end-to-end web applications and robust backend services — designing RESTful APIs with Node.js and Express.js, configuring custom middleware pipelines, architecting performant MongoDB and SQL databases, and developing clean, interactive frontends using React.js and TypeScript.
           </p>
         </section>
         <section>
           <h3>Key Focus Areas</h3>
           <p>
-            • Unsupervised Machine Learning & Packet Level Anomaly Detection<br />
-            • LLM-Powered Coding Agents & Autonomous Repositories Analyzers<br />
-            • Full-Stack Web Development (MERN, Next.js, REST APIs)<br />
+            • Full-Stack Web Development (MERN Stack, Next.js, React.js, TypeScript)<br />
+            • Backend Architecture &amp; REST APIs (Node.js, Express.js, Flask, Custom Middleware)<br />
+            • Database Systems &amp; Modeling (MongoDB, MySQL, Transactional Schema Design)<br />
+            • Asynchronous Workflows &amp; Containerization (Docker Sandboxes, Redis Background Queues)<br />
             • Problem Solving: 300+ DSA problems solved on LeetCode
           </p>
         </section>
