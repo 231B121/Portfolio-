@@ -1,4 +1,4 @@
-# Gourav Ojha — AI/ML & Full Stack Developer Portfolio
+# Gourav Ojha — Full Stack & Backend Developer Portfolio
 
 > 🌐 **Live Demo:** [https://portfolio-mauve-zeta-86.vercel.app/](https://portfolio-mauve-zeta-86.vercel.app/)
 
@@ -22,7 +22,7 @@ An elegant, interactive file-explorer developer portfolio crafted with a **Light
 ## 👨‍💻 Profile
 
 - **Name:** Gourav Ojha
-- **Focus:** AI/ML Engineering, Generative AI & Autonomous Coding Agents, Unsupervised Anomaly Detection, Full Stack Engineering
+- **Focus:** Full Stack Web Development, Backend Architecture, REST APIs, MERN & Next.js, Cloud & Docker Sandboxing
 - **Institution:** Jaypee University of Engineering and Technology (JUET, Guna — Batch 2023–2027)
 
 ---
