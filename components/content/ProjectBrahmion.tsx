@@ -16,14 +16,15 @@ export default function ProjectBrahmion() {
         Official corporate web platform for Brahmion Spacetech Pvt. Ltd. (IIT Kanpur incubated startup), engineered with React, TypeScript, and modern middleware integrations.
       </p>
 
-      <div className="project-visual" style={{ background: "linear-gradient(135deg, #090d16, #1c2541)", display: "flex", alignItems: "center", justifyContent: "center", gap: "20px" }}>
-        <div style={{ textAlign: "center", color: "white" }}>
-          <div style={{ display: "inline-flex", padding: "16px", borderRadius: "50%", background: "var(--ochre)", marginBottom: "8px" }}>
-            <FaRocket size={36} color="black" />
+      <div className="project-visual" style={{ background: "linear-gradient(135deg, rgba(254, 243, 199, 0.9) 0%, rgba(224, 242, 254, 0.9) 50%, rgba(254, 215, 170, 0.7) 100%)", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ display: "inline-flex", padding: "14px", borderRadius: "14px", background: "rgba(255, 255, 255, 0.95)", border: "1px solid rgba(192, 125, 50, 0.25)", boxShadow: "0 4px 14px -2px rgba(192, 125, 50, 0.15)", marginBottom: "8px" }}>
+            <FaRocket size={32} className="text-watercolor-amber" />
           </div>
-          <p style={{ margin: 0, fontFamily: "var(--pixel)", fontSize: "11px", letterSpacing: "1px" }}>BRAHMION SPACETECH · IIT KANPUR</p>
+          <p style={{ margin: 0, fontFamily: "var(--font-cambria)", fontSize: "13px", fontWeight: 700, letterSpacing: "1.5px", color: "var(--ink-primary)" }}>
+            BRAHMION SPACETECH · IIT KANPUR
+          </p>
         </div>
-        <div className="scan-line" />
       </div>
 
       <div className="doc-grid">
