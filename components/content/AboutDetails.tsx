@@ -30,12 +30,29 @@ export default function AboutDetails() {
         </section>
       </div>
 
-      <div style={{ marginTop: "24px", padding: "16px", background: "var(--paper)", border: "2px solid var(--ink)", borderRadius: "12px", boxShadow: "4px 4px 0 var(--ink)" }}>
-        <h4 style={{ fontFamily: "var(--pixel)", fontSize: "12px", marginBottom: "8px", color: "var(--red)" }}>QUICK CONTACT</h4>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", fontSize: "14px" }}>
-          <span style={{ display: "flex", alignItems: "center", gap: "6px" }}><FaLocationDot /> Guna, Madhya Pradesh, India</span>
-          <a href="mailto:gourav231b121@gmail.com" style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--ink)", fontWeight: 700 }}><FaEnvelope /> gourav231b121@gmail.com</a>
-          <a href="/resume.pdf" download="Gourav_Ojha_Resume.pdf" target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--red)", fontWeight: 700 }}><FaFilePdf /> Download Official Resume (PDF)</a>
+      <div className="mt-6 p-5 rounded-xl border border-wc-border bg-gradient-to-br from-white to-sky-50/40 shadow-card">
+        <h4 className="font-cambria text-xs font-bold uppercase tracking-wider mb-3 text-watercolor-blue">
+          Quick Contact
+        </h4>
+        <div className="flex flex-wrap items-center gap-4 text-sm text-ink-secondary">
+          <span className="flex items-center gap-2 text-ink-muted">
+            <FaLocationDot className="text-watercolor-blue" /> Guna, Madhya Pradesh, India
+          </span>
+          <a
+            href="mailto:gourav231b121@gmail.com"
+            className="flex items-center gap-2 font-medium text-ink-primary hover:text-watercolor-blue transition-colors"
+          >
+            <FaEnvelope className="text-watercolor-blue" /> gourav231b121@gmail.com
+          </a>
+          <a
+            href="/resume.pdf"
+            download="Gourav_Ojha_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 font-semibold text-watercolor-blue hover:underline"
+          >
+            <FaFilePdf /> Download Official Resume (PDF)
+          </a>
         </div>
       </div>
     </article>
