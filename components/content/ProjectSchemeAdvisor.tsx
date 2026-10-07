@@ -16,14 +16,15 @@ export default function ProjectSchemeAdvisor() {
         An AI-powered Flask web platform that classifies user queries and recommends eligible government schemes using Machine Learning algorithms and socio-economic eligibility filtering.
       </p>
 
-      <div className="project-visual" style={{ background: "linear-gradient(135deg, #1b263b, #0d1b2a)", display: "flex", alignItems: "center", justifyContent: "center", gap: "20px" }}>
-        <div style={{ textAlign: "center", color: "white" }}>
-          <div style={{ display: "inline-flex", padding: "16px", borderRadius: "50%", background: "var(--indigo)", marginBottom: "8px" }}>
-            <FaBuildingColumns size={36} color="white" />
+      <div className="project-visual" style={{ background: "linear-gradient(135deg, rgba(224, 242, 254, 0.9) 0%, rgba(204, 251, 241, 0.9) 50%, rgba(237, 233, 254, 0.8) 100%)", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ display: "inline-flex", padding: "14px", borderRadius: "14px", background: "rgba(255, 255, 255, 0.95)", border: "1px solid rgba(59, 130, 166, 0.25)", boxShadow: "0 4px 14px -2px rgba(59, 130, 166, 0.15)", marginBottom: "8px" }}>
+            <FaBuildingColumns size={32} className="text-watercolor-blue" />
           </div>
-          <p style={{ margin: 0, fontFamily: "var(--pixel)", fontSize: "11px", letterSpacing: "1px" }}>ML CLASSIFICATION + SCHEME MATCHING</p>
+          <p style={{ margin: 0, fontFamily: "var(--font-cambria)", fontSize: "13px", fontWeight: 700, letterSpacing: "1.5px", color: "var(--ink-primary)" }}>
+            ML CLASSIFICATION + SCHEME MATCHING
+          </p>
         </div>
-        <div className="scan-line" />
       </div>
 
       <div className="doc-grid">
