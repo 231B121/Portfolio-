@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaFilePdf, FaTerminal, FaFolderOpen, FaCode } from "react-icons/fa6";
 import Sidebar from "@/components/ui/Sidebar";
 import ContentWindow from "@/components/ui/ContentWindow";
@@ -45,12 +44,6 @@ export default function HomePage() {
     "projects-web": true,
   });
 
-  const reduceMotion = useReducedMotion();
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const samuraiX = useSpring(mouseX, { stiffness: 45, damping: 18 });
-  const samuraiY = useSpring(mouseY, { stiffness: 45, damping: 18 });
-
   useEffect(() => {
     if (typeof window !== "undefined" && sessionStorage.getItem("portfolio_splash_seen")) {
       setReady(true);
@@ -59,7 +52,7 @@ export default function HomePage() {
     const timer = setTimeout(() => {
       setReady(true);
       if (typeof window !== "undefined") sessionStorage.setItem("portfolio_splash_seen", "1");
-    }, 1500);
+    }, 1200);
     return () => clearTimeout(timer);
   }, []);
 
@@ -74,31 +67,20 @@ export default function HomePage() {
   const activePath = useMemo(() => findPath(fileTree, active), [active]);
   const ActiveComponent = activeItem?.component ?? null;
 
-  const handlePointer = (event: React.PointerEvent<HTMLElement>) => {
-    if (reduceMotion) return;
-    mouseX.set((event.clientX / window.innerWidth - 0.5) * 18);
-    mouseY.set((event.clientY / window.innerHeight - 0.5) * 12);
-  };
-
   const handleSelectFile = (id: string) => {
     setActive(id);
     setMobileTab("editor");
   };
 
   return (
-    <main className="archive-world" onPointerMove={handlePointer}>
+    <main className="archive-world">
       {!ready && <Splash onDismiss={handleDismiss} />}
-      <div className="world-sun" aria-hidden="true" />
-      <div className="ink-cloud cloud-one" aria-hidden="true" />
-      <div className="ink-cloud cloud-two" aria-hidden="true" />
-      <div className="world-mountains" aria-hidden="true"><i /><i /><i /></div>
-      <motion.img
-        className="world-samurai"
-        src="/samurai-engineer-pixel.png"
-        alt=""
-        aria-hidden="true"
-        style={{ x: samuraiX, y: samuraiY }}
-      />
+      <div className="watercolor-blobs" aria-hidden="true">
+        <div className="wc-blob wc-blob-1" />
+        <div className="wc-blob wc-blob-2" />
+        <div className="wc-blob wc-blob-3" />
+        <div className="wc-blob wc-blob-4" />
+      </div>
 
       <section className="archive-shell">
         <header className="archive-titlebar">
