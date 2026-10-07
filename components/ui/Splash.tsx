@@ -56,7 +56,7 @@ export default function Splash({ onDismiss }: { onDismiss?: () => void }) {
         transition={{ duration: reduce ? 0.01 : 1.1, times: [0, 0.35, 0.75, 1], ease: "easeOut" }}
       >
         <h1 className="splash-title">Gourav Ojha</h1>
-        <p className="splash-subtitle">AI/ML &amp; Full Stack Developer • Portfolio</p>
+        <p className="splash-subtitle">Full Stack &amp; Backend Developer • Portfolio</p>
       </motion.div>
     </motion.div>
   );
