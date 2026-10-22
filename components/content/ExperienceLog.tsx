@@ -1,22 +1,33 @@
 const roles = [
   {
-    company: "Brahmion Spacetech Pvt. Ltd. (IIT Kanpur)",
-    role: "Full Stack Developer",
-    date: "Dec 2025 — Feb 2026",
+    company: "Indux Technology",
+    role: "Full Stack Developer Intern",
+    date: "Oct 2026 — Present",
     bullets: [
-      "Developed the company's official website using React and TypeScript.",
-      "Worked on backend integration and configured middleware to handle and process requests.",
-      "Managed and maintained the live website and worked with the team on deployments as a team member, coordinating with the founders on accurate product and team content.",
+      "Engaged as a Full Stack Developer Intern at Indux Technology, focusing on web development projects.",
+      "Collaborated with team members to learn new technologies and enhance coding skills.",
+      "Contributed to the development of innovative solutions, gaining practical experience in the tech industry.",
+      "Embraced the startup culture, fostering creativity and adaptability in a fast-paced environment.",
     ],
   },
   {
-    company: "Unified Mentor Pvt. Ltd.",
-    role: "Full Stack Web Development Intern",
-    date: "June 2025 — July 2025",
+    company: "SKXYWTF (World Trade Factory)",
+    role: "AI Agent Engineer",
+    date: "Sept 2026 — Oct 2026",
     bullets: [
-      "Built responsive web applications with React.js, Node.js, Express.js, and MongoDB; designed and integrated REST APIs and used Git/GitHub for collaboration.",
-      "Built a MERN-based chat application with anonymous rooms, where users can join a room and chat without revealing their identity.",
-      "Learned the MERN stack hands-on in a project-based internship, covering frontend-backend integration, MongoDB data handling, and structuring a full stack project.",
+      "Built an AI Repository Health Agent (Node.js/Python, GitHub REST API, PostgreSQL) scanning 15+ private repos nightly.",
+      "Implemented deterministic health scoring with an LLM explainer giving plain-language findings with file/line references.",
+      "Built a safe auto-fix pipeline (allow-listed fixes) that tests patches in a sandbox and opens draft PRs for human review.",
+    ],
+  },
+  {
+    company: "Brahmion Spacetech Pvt. Ltd. (IIT Kanpur)",
+    role: "Full Stack Developer Intern",
+    date: "Dec 2025 — Feb 2026",
+    bullets: [
+      "Built a frontend-only cinematic single-page website using React, TypeScript, Vite and Tailwind CSS, deployed on Vercel.",
+      "Managed and maintained the live website and worked with the team on deployments as a team member, coordinating with the founders on accurate product and team content.",
+      "Organized site content in typed data files, using only verified public content from the company's reference site.",
     ],
   },
 ];
