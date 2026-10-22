@@ -10,23 +10,23 @@ export default function AboutDetails() {
         </div>
       </header>
       <p className="lead">
-        I&apos;m Gourav Ojha, a Computer Science & Engineering undergraduate at Jaypee University of Engineering and Technology (JUET, Guna, Batch 2023–2027) focused on Full Stack Web Development, Backend Architecture, and Modern Web Applications.
+        I&apos;m Gourav Ojha, a Computer Science undergraduate at Jaypee University of Engineering and Technology (JUET, Guna, Batch 2023–2027) seeking a Software Developer (SDE) Internship, currently working as a Full Stack Developer Intern at Indux Technology. I have hands-on experience building full-stack applications, autonomous AI coding agents, and machine learning anomaly detection systems.
       </p>
       <div className="doc-grid">
         <section>
           <h3>What I do</h3>
           <p>
-            I build responsive, end-to-end web applications and robust backend services — designing RESTful APIs with Node.js and Express.js, configuring custom middleware pipelines, architecting performant MongoDB and SQL databases, and developing clean, interactive frontends using React.js and TypeScript.
+            I build responsive, end-to-end web applications and robust backend services — designing RESTful APIs with Node.js, Express.js, and Flask, developing LLM-powered coding agents with automated sandbox testing, architecting performant MongoDB, MySQL, and PostgreSQL databases, and crafting clean, interactive frontends using React.js and TypeScript.
           </p>
         </section>
         <section>
           <h3>Key Focus Areas</h3>
           <p>
-            • Full-Stack Web Development (MERN Stack, Next.js, React.js, TypeScript)<br />
-            • Backend Architecture &amp; REST APIs (Node.js, Express.js, Flask, Custom Middleware)<br />
-            • Database Systems &amp; Modeling (MongoDB, MySQL, Transactional Schema Design)<br />
-            • Asynchronous Workflows &amp; Containerization (Docker Sandboxes, Redis Background Queues)<br />
-            • Problem Solving: 300+ DSA problems solved on LeetCode
+            • SDE &amp; Full-Stack Development (React.js, TypeScript, Next.js, Node.js, Express.js, MERN)<br />
+            • AI Agents &amp; Generative AI (LLMs, Prompt Engineering, GitHub REST API, Sandbox Auto-fix Pipelines)<br />
+            • ML &amp; Security (Isolation Forest, Network Packet Sniffing with Scapy, Pandas, NumPy, Scikit-learn)<br />
+            • Databases &amp; Cloud Infrastructure (MongoDB, PostgreSQL, MySQL, Redis, Docker Sandboxes)<br />
+            • Core CS &amp; Problem Solving: 300+ DSA problems solved on LeetCode, OOP, DBMS, OS
           </p>
         </section>
       </div>
