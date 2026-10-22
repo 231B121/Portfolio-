@@ -1,4 +1,4 @@
-# Gourav Ojha — Full Stack & Backend Developer Portfolio
+# Gourav Ojha — SDE Intern & Full Stack Developer Portfolio
 
 > 🌐 **Live Demo:** [https://portfolio-mauve-zeta-86.vercel.app/](https://portfolio-mauve-zeta-86.vercel.app/)
 
@@ -22,7 +22,8 @@ An elegant, interactive file-explorer developer portfolio crafted with a **Light
 ## 👨‍💻 Profile
 
 - **Name:** Gourav Ojha
-- **Focus:** Full Stack Web Development, Backend Architecture, REST APIs, MERN & Next.js, Cloud & Docker Sandboxing
+- **Role:** SDE Intern / Full Stack Developer Intern (Indux Technology)
+- **Focus:** Full Stack Web Development, Backend Architecture, AI Coding Agents & LLMs, REST APIs, MERN & Next.js, Docker Sandboxing
 - **Institution:** Jaypee University of Engineering and Technology (JUET, Guna — Batch 2023–2027)
 
 ---
