@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaCode, FaAward, FaGraduationCap } from "react-icons/fa6";
+import { FaCode, FaAward, FaGraduationCap, FaPersonHiking } from "react-icons/fa6";
 
 export function EducationFile() {
   return (
@@ -88,6 +88,18 @@ export function CertificationFile() {
             <h2>Top 10 Student — Class X &amp; XII</h2>
             <p>Scored 94.5% in Class X and 80.2% in Class XII with meritorious academic standing in school.</p>
             <strong className="certificate-link" style={{ color: "var(--wc-lavender)" }}>Academic Excellence</strong>
+          </div>
+        </div>
+
+        <div className="certificate-card">
+          <div className="certificate-mark" style={{ background: "rgba(59, 130, 166, 0.12)", color: "var(--wc-teal)", borderColor: "rgba(59, 130, 166, 0.3)" }}>
+            <FaPersonHiking />
+          </div>
+          <div>
+            <span style={{ color: "var(--wc-teal)" }}>Endurance &amp; Strategy</span>
+            <h2>All India Trekking Camp &amp; Division-Level Chess</h2>
+            <p>Participated in the national-level All India Trekking Camp demonstrating endurance and resilience, and competed in Division-Level Chess Tournaments.</p>
+            <strong className="certificate-link" style={{ color: "var(--wc-teal)" }}>National &amp; Division Level</strong>
           </div>
         </div>
       </div>
