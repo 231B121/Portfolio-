@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Gourav Ojha | Full Stack & Backend Developer Portfolio",
+  title: "Gourav Ojha | SDE Intern & Full Stack Developer Portfolio",
   description:
-    "Portfolio of Gourav Ojha - Full Stack Developer, Backend Developer, React.js, TypeScript & Node.js Engineer",
+    "Portfolio of Gourav Ojha - SDE Intern, Full Stack Developer, Backend Developer, Python & AI Systems Engineer",
 };
 
 export const viewport: Viewport = {
