@@ -5,6 +5,7 @@ import {
   SiFlask,
   SiScikitlearn,
   SiNumpy,
+  SiPandas,
 } from "react-icons/si";
 
 const items = [
@@ -12,8 +13,9 @@ const items = [
   { label: "Node.js", Icon: SiNodedotjs, color: "#16a34a" },
   { label: "Express.js", Icon: SiExpress, color: "#475569" },
   { label: "Flask", Icon: SiFlask, color: "#0d9488" },
-  { label: "Scikit-Learn", Icon: SiScikitlearn, color: "#ea580c" },
+  { label: "Pandas", Icon: SiPandas, color: "#150458" },
   { label: "NumPy", Icon: SiNumpy, color: "#2563eb" },
+  { label: "Scikit-Learn", Icon: SiScikitlearn, color: "#ea580c" },
 ];
 
 export default function TechFrameworks() {
