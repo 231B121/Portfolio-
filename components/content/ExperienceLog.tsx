@@ -15,10 +15,10 @@ const roles: Role[] = [
     location: "Remote / Hybrid",
     skills: ["Node.js", "LLM Gateway", "Octokit", "MongoDB", "BullMQ", "Redis", "OSV.dev"],
     bullets: [
-      "Built Repository Health Agent for 15+ repos: security audits, OSV.dev dependency tracking, branch compliance.",
-      "Decoupled scoring from LLM reasoning for 100% deterministic health grading, with an LLM explainer for guidance.",
-      "Implemented guardrails with fingerprint masking to prevent tokens and keys leaking to external LLM providers.",
-      "Built Safe Fixer: allow-listed auto-fixes (dependencies, CI, .gitignore) via draft PRs with human review.",
+      "Repository Health Agent: Built and deployed an automated health scanner for 15+ private repositories, executing automated security audits, OSV.dev dependency vulnerability tracking, and branch compliance enforcement.",
+      "Deterministic Scoring: Decoupled scoring algorithms from LLM reasoning for 100% deterministic, reproducible health grading, backed by an LLM guidance explainer for remediation.",
+      "Token & Key Guardrails: Implemented security guardrails with fingerprint masking to prevent tokens, API keys, and sensitive secrets leaking to external LLM providers.",
+      "Safe Fixer Pipeline: Built an allow-listed auto-fix engine that tests generated patches in an isolated sandbox and submits draft PRs for human review.",
     ],
   },
   {
@@ -28,10 +28,10 @@ const roles: Role[] = [
     location: "Remote / On-site",
     skills: ["Next.js 14/15", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "REST APIs"],
     bullets: [
-      "Developed PicoTech ERP (EV battery manufacturing) with Next.js 14/15, Tailwind CSS, Node.js/Express, MongoDB.",
-      "Built a quotation & invoicing engine with 18% GST/HSN automation, payment tracking and PDF generation.",
-      "Built secure REST APIs with MongoDB aggregation, indexing and validation, handling thousands of SKUs.",
-      "Collaborated via Git/GitHub: branch management, merge-conflict resolution and production builds via Turbopack.",
+      "PicoTech ERP System: Developed the core ERP platform for EV battery manufacturing leveraging Next.js 14/15, Tailwind CSS, Node.js/Express, and MongoDB.",
+      "Quotation & Invoicing Automation: Built an automated quotation and invoicing engine featuring 18% GST/HSN code computation, payment lifecycle tracking, and dynamic PDF invoice generation.",
+      "High-Volume REST APIs: Architected performant REST endpoints using MongoDB aggregation pipelines, indexing, and strict schema validation, efficiently managing thousands of component SKUs.",
+      "Git & Turbopack Collaboration: Maintained team branch workflows, resolved merge conflicts, and optimized production builds utilizing Turbopack.",
     ],
   },
   {
@@ -41,8 +41,8 @@ const roles: Role[] = [
     location: "IIT Kanpur Incubated",
     skills: ["React", "TypeScript", "Vite", "Tailwind CSS", "Vercel"],
     bullets: [
-      "Built a cinematic single-page website using React, TypeScript, Vite and Tailwind CSS, deployed on Vercel.",
-      "Managed the live website and handled deployments, coordinating with founders on product and team content.",
+      "Cinematic Single-Page Application: Built and deployed a high-performance single-page showcase website utilizing React, TypeScript, Vite, and Tailwind CSS on Vercel.",
+      "Live Deployments & Founder Coordination: Managed live production deployments and collaborated closely with founders to integrate authentic product specifications and team information.",
     ],
   },
 ];
@@ -69,7 +69,10 @@ export default function ExperienceLog() {
             <div className="entry-body">
               <div className="entry-top">
                 <div>
-                  <span className="entry-role-tag">{item.role}</span>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="entry-index-pill md:hidden">#{index + 1}</span>
+                    <span className="entry-role-tag">{item.role}</span>
+                  </div>
                   <h2>{item.company}</h2>
                   {item.location && <span className="entry-loc">{item.location}</span>}
                 </div>
@@ -84,11 +87,29 @@ export default function ExperienceLog() {
                 </div>
               )}
 
-              <ul>
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
+              <div className="experience-paragraphs">
+                {item.bullets.map((bullet, bIdx) => {
+                  const colonIndex = bullet.indexOf(":");
+                  const hasColon = colonIndex !== -1;
+                  const heading = hasColon ? bullet.substring(0, colonIndex).trim() : null;
+                  const description = hasColon ? bullet.substring(colonIndex + 1).trim() : bullet;
+
+                  return (
+                    <div key={bIdx} className="exp-para-item">
+                      <span className="exp-bullet-dot">✦</span>
+                      <p className="exp-para-text">
+                        {heading ? (
+                          <>
+                            <strong className="exp-para-bold">{heading}:</strong> {description}
+                          </>
+                        ) : (
+                          description
+                        )}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </section>
         ))}
