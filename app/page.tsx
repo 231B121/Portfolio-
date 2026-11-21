@@ -1,7 +1,22 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { FaGithub, FaLinkedinIn, FaEnvelope, FaFilePdf, FaTerminal, FaFolderOpen, FaCode } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaEnvelope,
+  FaFilePdf,
+  FaTerminal,
+  FaFolderOpen,
+  FaCode,
+  FaBolt,
+  FaBriefcase,
+  FaRocket,
+  FaUser,
+  FaGraduationCap,
+  FaTrophy,
+  FaHouse,
+} from "react-icons/fa6";
 import Sidebar from "@/components/ui/Sidebar";
 import ContentWindow from "@/components/ui/ContentWindow";
 import Splash from "@/components/ui/Splash";
@@ -37,11 +52,14 @@ export default function HomePage() {
   const [open, setOpen] = useState<Record<string, boolean>>({
     portfolio: true,
     about: true,
+    "skills-folder": true,
     experience: true,
     projects: true,
     "projects-ai": true,
     "projects-ml": true,
     "projects-web": true,
+    credentials: true,
+    "connect-folder": true,
   });
 
   useEffect(() => {
@@ -72,6 +90,16 @@ export default function HomePage() {
     setMobileTab("editor");
   };
 
+  // Quick navigation destinations
+  const quickNavItems = [
+    { id: "skills-overview", label: "Skills", icon: FaBolt, color: "text-amber-500" },
+    { id: "experience-log", label: "Experience", icon: FaBriefcase, color: "text-sky-600" },
+    { id: "project-repox", label: "Projects", icon: FaRocket, color: "text-rose-500" },
+    { id: "about-home", label: "About", icon: FaUser, color: "text-indigo-600" },
+    { id: "education", label: "Education", icon: FaGraduationCap, color: "text-emerald-600" },
+    { id: "certification", label: "Wins", icon: FaTrophy, color: "text-amber-600" },
+  ];
+
   return (
     <main className="archive-world">
       {!ready && <Splash onDismiss={handleDismiss} />}
@@ -83,6 +111,7 @@ export default function HomePage() {
       </div>
 
       <section className="archive-shell">
+        {/* Titlebar */}
         <header className="archive-titlebar">
           <div className="window-dots" aria-hidden="true"><span /><span /><span /></div>
           <div className="archive-brand">
@@ -96,15 +125,17 @@ export default function HomePage() {
               {mobileTab === "files" ? <FaCode size={13} /> : <FaFolderOpen size={13} />}
             </button>
             <strong>GOURAV OJHA</strong>
+            <span className="brand-badge hidden sm:inline-block">Python &amp; Full Stack</span>
           </div>
           <div className="archive-actions">
             <a href="https://github.com/231B121" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><FaGithub /></a>
             <a href="https://www.linkedin.com/in/gourav-ojha-aiml/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><FaLinkedinIn /></a>
             <a href="mailto:gourav231b121@gmail.com" aria-label="Email" title="Email"><FaEnvelope /></a>
-            <a href="/resume.pdf" download="Gourav_Ojha_Resume.pdf" target="_blank" rel="noreferrer" aria-label="Download Resume" title="Download Resume"><FaFilePdf /></a>
+            <a href="/Gourav_Ojh.pdf" download="Gourav_Ojh.pdf" target="_blank" rel="noreferrer" aria-label="Download Gourav_Ojh.pdf" title="Download Resume"><FaFilePdf /></a>
           </div>
         </header>
 
+        {/* Toolbar with Breadcrumbs & Mobile File/Editor Switcher */}
         <div className="archive-toolbar">
           <div className="breadcrumb">
             <button
@@ -123,18 +154,48 @@ export default function HomePage() {
               onClick={() => setMobileTab("files")}
               className={`mobile-tab-btn ${mobileTab === "files" ? "active" : ""}`}
             >
-              <FaFolderOpen size={10} /> Files
+              <FaFolderOpen size={11} /> Files
             </button>
             <button
               type="button"
               onClick={() => setMobileTab("editor")}
               className={`mobile-tab-btn ${mobileTab === "editor" ? "active" : ""}`}
             >
-              <FaCode size={10} /> Editor
+              <FaCode size={11} /> Editor
             </button>
           </div>
         </div>
 
+        {/* Mobile Quick Keys Header Bar (Always visible on mobile to switch to Skills, Experience, Projects) */}
+        <div className="mobile-quick-nav md:hidden">
+          <div className="mobile-quick-nav-track">
+            {quickNavItems.map((item) => {
+              const Icon = item.icon;
+              const isCurrent = active === item.id || (item.id === "skills-overview" && active.startsWith("tech-"));
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => handleSelectFile(item.id)}
+                  className={`quick-nav-key ${isCurrent ? "active-key" : ""}`}
+                >
+                  <Icon size={12} className={item.color} />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+            <button
+              type="button"
+              onClick={() => setMobileTab(mobileTab === "files" ? "editor" : "files")}
+              className={`quick-nav-key ${mobileTab === "files" ? "active-key" : ""}`}
+            >
+              <FaFolderOpen size={12} className="text-slate-600" />
+              <span>{mobileTab === "files" ? "Close Files" : "All Files"}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Workspace Layout */}
         <div className="archive-grid">
           <div className={`archive-sidebar-wrapper ${mobileTab === "files" ? "mobile-show" : "mobile-hide"}`}>
             <Sidebar
@@ -154,6 +215,54 @@ export default function HomePage() {
             />
           </div>
         </div>
+
+        {/* Modern Mobile Floating Bottom Dock (Accessible at thumb level) */}
+        <nav className="mobile-bottom-dock md:hidden" aria-label="Mobile Navigation">
+          <button
+            type="button"
+            onClick={() => handleSelectFile("about-home")}
+            className={`dock-btn ${active === "about-home" || active === "about-details" ? "dock-active" : ""}`}
+          >
+            <FaHouse size={16} />
+            <span>Home</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleSelectFile("skills-overview")}
+            className={`dock-btn ${active === "skills-overview" || active.startsWith("tech-") ? "dock-active" : ""}`}
+          >
+            <FaBolt size={16} className="text-amber-500" />
+            <span>Skills</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleSelectFile("experience-log")}
+            className={`dock-btn ${active === "experience-log" ? "dock-active" : ""}`}
+          >
+            <FaBriefcase size={16} className="text-sky-500" />
+            <span>Internships</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleSelectFile("project-repox")}
+            className={`dock-btn ${active.startsWith("project-") ? "dock-active" : ""}`}
+          >
+            <FaRocket size={16} className="text-rose-500" />
+            <span>Projects</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setMobileTab(mobileTab === "files" ? "editor" : "files")}
+            className={`dock-btn ${mobileTab === "files" ? "dock-active" : ""}`}
+          >
+            <FaFolderOpen size={16} className="text-indigo-500" />
+            <span>Files</span>
+          </button>
+        </nav>
       </section>
     </main>
   );
