@@ -7,7 +7,7 @@ import {
   FaLocationDot,
   FaCode,
   FaBriefcase,
-  FaGraduationCap,
+  FaPhone,
 } from "react-icons/fa6";
 
 export default function AboutContent() {
@@ -18,34 +18,34 @@ export default function AboutContent() {
         <div className="welcome-card-header">
           <div className="welcome-status-badge">
             <span className="live-dot" />
-            <span>OPEN FOR SDE &amp; FULL STACK ROLES</span>
+            <span>OPEN FOR PYTHON DEVELOPER &amp; SDE INTERNSHIPS</span>
           </div>
           <div className="welcome-location-badge">
             <FaLocationDot size={12} />
-            <span>JUET / Guna, India</span>
+            <span>Guna, Madhya Pradesh, India</span>
           </div>
         </div>
 
         {/* Hero Identity Block */}
         <div className="welcome-hero">
-          <span className="doc-kicker">SDE INTERN • FULL STACK &amp; BACKEND DEVELOPER • CSE &apos;27</span>
+          <span className="doc-kicker">PYTHON DEVELOPER INTERN • FASTAPI • FLASK • REST APIS • MERN STACK</span>
           <h1 className="welcome-name">
             Gourav <em>Ojha.</em>
           </h1>
           <div className="typed-line">
             <TypeAnimation
               sequence={[
-                "SDE Intern.",
+                "Python Developer Intern.",
                 1300,
-                "Full Stack Developer.",
+                "FastAPI & Flask REST APIs.",
                 1300,
-                "Backend Developer.",
+                "AI Agent Engineer @ WTF.",
                 1300,
-                "React.js & TypeScript Engineer.",
+                "MERN & Next.js Full Stack.",
                 1300,
-                "AI Agent & ML Systems Builder.",
+                "ML Network Anomaly Detection.",
                 1300,
-                "300+ LeetCode Solved.",
+                "300+ LeetCode DSA Solved.",
                 1300,
               ]}
               wrapper="span"
@@ -55,18 +55,17 @@ export default function AboutContent() {
           </div>
         </div>
 
-        {/* Bio Description */}
+        {/* Bio Description from Resume */}
         <div className="welcome-bio">
           <p>
-            Computer Science undergraduate at{" "}
-            <strong>Jaypee University of Engineering and Technology (JUET, Guna, 2023–2027)</strong>,
-            currently working as a <strong>Full Stack Developer Intern at Indux Technology</strong>.
-            Passionate about engineering scalable Full-Stack architectures, AI coding agents, and robust backend systems.
+            Computer Science undergraduate (B.Tech, 2027 at <strong>Jaypee University of Engineering and Technology, JUET Guna</strong>)
+            seeking a <strong>Python Developer Internship</strong> and SDE roles. Strong in <strong>Python, FastAPI, Flask</strong>, and
+            <strong>REST APIs</strong>, with hands-on production experience building AI-driven systems.
           </p>
           <p>
-            Engineered an AI Repository Health Agent at <strong>SKXYWTF</strong> with automated sandbox testing and PR workflows,
-            and architected <strong>RepoX</strong>, an autonomous coding agent with Docker sandboxing, Redis-backed queues,
-            and 5 static analysis engines with LLM reasoning.
+            Engineered an <strong>AI Repository Health Agent</strong> at <strong>World Trade Factory (SKXYWTF)</strong> with automated OSV.dev dependency tracking and guardrails,
+            developed an ERP manufacturing system with Next.js/MERN at <strong>Indux Technology</strong>,
+            and trained an unsupervised ML anomaly detection engine with Scapy and Isolation Forest.
           </p>
         </div>
 
@@ -96,41 +95,42 @@ export default function AboutContent() {
             </div>
             <div className="stat-details">
               <strong>15+</strong>
-              <span>Repositories</span>
+              <span>Audited Repos</span>
             </div>
           </div>
         </div>
 
         {/* Skills & Focus Pills */}
         <div className="welcome-skills-bar">
-          <span className="skills-label">CORE FOCUS:</span>
+          <span className="skills-label">CORE TECH:</span>
           <div className="skills-chips">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>Flask</span>
+            <span>REST APIs</span>
             <span>React.js</span>
-            <span>TypeScript</span>
+            <span>Next.js 14/15</span>
             <span>Node.js</span>
             <span>Express.js</span>
-            <span>Next.js</span>
-            <span>PostgreSQL</span>
             <span>MongoDB</span>
-            <span>REST APIs</span>
+            <span>MySQL</span>
             <span>Docker</span>
             <span>Redis</span>
-            <span>LLMs &amp; GenAI</span>
-            <span>Python</span>
+            <span>DSA (300+)</span>
           </div>
         </div>
 
         {/* Call-to-Action Buttons */}
         <div className="welcome-actions">
           <a
-            href="/resume.pdf"
-            download="Gourav_Ojha_Resume.pdf"
+            href="/Gourav_Ojh.pdf"
+            download="Gourav_Ojh.pdf"
             target="_blank"
             rel="noreferrer"
             className="welcome-btn btn-primary"
-            title="Download Résumé"
+            title="Download Gourav_Ojh.pdf"
           >
-            <FaFilePdf size={14} /> Download Résumé
+            <FaFilePdf size={14} /> Download Résumé (PDF)
           </a>
           <a
             href="https://github.com/231B121"
@@ -151,11 +151,18 @@ export default function AboutContent() {
             <FaLinkedinIn size={14} /> LinkedIn
           </a>
           <a
+            href="tel:+918269726425"
+            className="welcome-btn btn-phone"
+            title="Call +91 8269726425"
+          >
+            <FaPhone size={14} /> +91 8269726425
+          </a>
+          <a
             href="mailto:gourav231b121@gmail.com"
             className="welcome-btn btn-email"
             title="Send Email"
           >
-            <FaEnvelope size={14} /> Contact
+            <FaEnvelope size={14} /> Contact Me
           </a>
         </div>
       </div>
