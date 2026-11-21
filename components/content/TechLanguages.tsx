@@ -1,11 +1,11 @@
 import { SiPython, SiTypescript, SiJavascript, SiCplusplus, SiMysql } from "react-icons/si";
 
 const items = [
-  { label: "Python", Icon: SiPython, color: "#3b82a6" },
-  { label: "TypeScript", Icon: SiTypescript, color: "#2563eb" },
-  { label: "JavaScript", Icon: SiJavascript, color: "#ca8a04" },
-  { label: "C++", Icon: SiCplusplus, color: "#0284c7" },
-  { label: "SQL", Icon: SiMysql, color: "#0d9488" },
+  { label: "Python", desc: "Core language for FastAPI, Flask, Scapy & ML pipelines", Icon: SiPython, color: "#3776ab" },
+  { label: "JavaScript (ES6+)", desc: "Modern syntax, async/await, event loops, DOM & Node APIs", Icon: SiJavascript, color: "#ca8a04" },
+  { label: "TypeScript", desc: "Type-safe engineering across React, Next.js & enterprise apps", Icon: SiTypescript, color: "#2563eb" },
+  { label: "SQL", desc: "Complex joins, indexing, query optimization & relational schemas", Icon: SiMysql, color: "#0d9488" },
+  { label: "C++", desc: "Algorithmic problem solving & 300+ LeetCode DSA implementations", Icon: SiCplusplus, color: "#0284c7" },
 ];
 
 export default function TechLanguages() {
@@ -16,25 +16,31 @@ export default function TechLanguages() {
           <span className="doc-kicker">TECH STACK</span>
           <h1>Programming Languages</h1>
         </div>
+        <span className="ink-stamp blue">CORE</span>
       </header>
       <p className="lead">
-        Core languages utilized for Machine Learning models, backend APIs, data structures, and responsive user interfaces.
+        Languages utilized for high-performance Python backends, machine learning anomaly detection, MERN full-stack architectures, and algorithmic problem solving.
       </p>
-      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-        {items.map(({ label, Icon, color }) => (
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+        {items.map(({ label, desc, Icon, color }) => (
           <div
             key={label}
-            className="flex items-center gap-3 rounded-xl bg-white/95 p-3 md:p-4 border border-wc-border shadow-card hover:border-watercolor-blue/40 hover:-translate-y-0.5 transition-all"
+            className="flex flex-col gap-2 rounded-xl bg-white/95 p-4 border border-wc-border shadow-card hover:border-watercolor-blue/40 hover:-translate-y-0.5 transition-all"
           >
-            <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-              style={{ background: `${color}15`, color: color }}
-            >
-              <Icon size={22} />
+            <div className="flex items-center gap-3">
+              <div
+                className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ background: `${color}15`, color: color }}
+              >
+                <Icon size={22} />
+              </div>
+              <span className="font-cambria font-semibold text-base text-ink-primary">
+                {label}
+              </span>
             </div>
-            <span className="font-cambria font-semibold text-base text-ink-primary">
-              {label}
-            </span>
+            <p className="text-xs text-ink-muted font-sans leading-relaxed m-0">
+              {desc}
+            </p>
           </div>
         ))}
       </div>
