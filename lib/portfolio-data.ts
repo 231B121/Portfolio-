@@ -12,6 +12,10 @@ export type TreeItem = {
 import AboutContent from "@/components/content/AboutContent";
 import AboutDetails from "@/components/content/AboutDetails";
 import ExperienceLog from "@/components/content/ExperienceLog";
+import TechSkills from "@/components/content/TechSkills";
+import TechLanguages from "@/components/content/TechLanguages";
+import TechFrameworks from "@/components/content/TechFrameworks";
+import TechTechnologies from "@/components/content/TechTechnologies";
 import ProjectRepoX from "@/components/content/ProjectRepoX";
 import ProjectPacketSniffer from "@/components/content/ProjectPacketSniffer";
 import ProjectBrahmion from "@/components/content/ProjectBrahmion";
@@ -20,9 +24,6 @@ import ProjectEdugen from "@/components/content/ProjectEdugen";
 import ProjectFoodOrdering from "@/components/content/ProjectFoodOrdering";
 import ProjectUrlShortener from "@/components/content/ProjectUrlShortener";
 import { EducationFile, CertificationFile } from "@/components/content/Credentials";
-import TechLanguages from "@/components/content/TechLanguages";
-import TechFrameworks from "@/components/content/TechFrameworks";
-import TechTechnologies from "@/components/content/TechTechnologies";
 import ConnectLinks from "@/components/content/ConnectLinks";
 
 export const fileTree: TreeItem[] = [
@@ -47,6 +48,37 @@ export const fileTree: TreeItem[] = [
             name: "profile.md",
             type: "file",
             component: AboutDetails,
+          },
+        ],
+      },
+      {
+        id: "skills-folder",
+        name: "skills",
+        type: "folder",
+        children: [
+          {
+            id: "skills-overview",
+            name: "skills.jsx",
+            type: "file",
+            component: TechSkills,
+          },
+          {
+            id: "tech-languages",
+            name: "languages.jsx",
+            type: "file",
+            component: TechLanguages,
+          },
+          {
+            id: "tech-frameworks",
+            name: "frameworks.jsx",
+            type: "file",
+            component: TechFrameworks,
+          },
+          {
+            id: "tech-technologies",
+            name: "tools-and-ai.jsx",
+            type: "file",
+            component: TechTechnologies,
           },
         ],
       },
@@ -149,31 +181,6 @@ export const fileTree: TreeItem[] = [
             name: "achievements.md",
             type: "file",
             component: CertificationFile,
-          },
-        ],
-      },
-      {
-        id: "tech-stack",
-        name: "tech-stack",
-        type: "folder",
-        children: [
-          {
-            id: "tech-languages",
-            name: "languages.jsx",
-            type: "file",
-            component: TechLanguages,
-          },
-          {
-            id: "tech-frameworks",
-            name: "frameworks.jsx",
-            type: "file",
-            component: TechFrameworks,
-          },
-          {
-            id: "tech-technologies",
-            name: "tools-and-ai.jsx",
-            type: "file",
-            component: TechTechnologies,
           },
         ],
       },
