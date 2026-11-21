@@ -27,7 +27,7 @@ export default function ConnectLinks() {
     },
     {
       label: "LeetCode Profile",
-      detail: "300+ Problems Solved",
+      detail: "300+ Problems Solved across DSA",
       href: "https://leetcode.com/u/231B121/",
       Icon: FaCode,
       color: "#ea580c",
@@ -50,9 +50,9 @@ export default function ConnectLinks() {
       download: false,
     },
     {
-      label: "Download Official Résumé (PDF)",
-      detail: "Gourav_Ojha_Resume.pdf",
-      href: "/resume.pdf",
+      label: "Download Official Résumé (Gourav_Ojh.pdf)",
+      detail: "Latest Verified Resume",
+      href: "/Gourav_Ojh.pdf",
       Icon: FaFilePdf,
       color: "#3b82a6",
       download: true,
@@ -66,16 +66,17 @@ export default function ConnectLinks() {
           <span className="doc-kicker">CONNECT</span>
           <h1>Get In Touch</h1>
         </div>
+        <span className="ink-stamp blue">OPEN TO WORK</span>
       </header>
       <p className="lead">
-        Feel free to reach out for AI/ML internship opportunities, research collaborations, or software projects.
+        Open for Python Developer Internships, SDE roles, and Full-Stack collaborations. Feel free to connect directly via email, phone, or LinkedIn.
       </p>
       <div className="grid gap-3.5 mt-6">
         {items.map(({ label, detail, href, Icon, color, download }) => (
           <a
             key={label}
             href={href}
-            download={download ? "Gourav_Ojha_Resume.pdf" : undefined}
+            download={download ? "Gourav_Ojh.pdf" : undefined}
             target={href.startsWith("mailto:") || href.startsWith("tel:") ? undefined : "_blank"}
             rel="noreferrer noopener"
             className="flex items-center justify-between rounded-xl bg-white/95 p-4 border border-wc-border shadow-card hover:border-watercolor-blue/40 hover:-translate-y-0.5 hover:shadow-watercolor transition-all group"
