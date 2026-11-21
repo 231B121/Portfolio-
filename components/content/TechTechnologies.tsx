@@ -1,34 +1,30 @@
 import {
-  SiDocker,
-  SiRedis,
   SiMongodb,
-  SiPostgresql,
   SiMysql,
+  SiRedis,
+  SiDocker,
   SiGit,
   SiGithub,
   SiPostman,
-  SiVercel,
   SiLinux,
   SiOpenai,
+  SiVercel,
 } from "react-icons/si";
-import { FaBrain, FaNetworkWired, FaRobot, FaServer } from "react-icons/fa6";
+import { FaDatabase, FaNetworkWired, FaRobot, FaShieldHalved } from "react-icons/fa6";
 
 const items = [
-  { label: "LLMs & GenAI", Icon: SiOpenai, color: "#0d9488" },
-  { label: "AI Agents & RAG", Icon: FaRobot, color: "#3b82a6" },
-  { label: "Anomaly Detection", Icon: FaBrain, color: "#7c72ab" },
-  { label: "Scapy & Packets", Icon: FaNetworkWired, color: "#0284c7" },
-  { label: "Docker", Icon: SiDocker, color: "#0284c7" },
-  { label: "Redis", Icon: SiRedis, color: "#dc2626" },
-  { label: "PostgreSQL", Icon: SiPostgresql, color: "#336791" },
-  { label: "MongoDB", Icon: SiMongodb, color: "#16a34a" },
-  { label: "MySQL", Icon: SiMysql, color: "#0d9488" },
-  { label: "REST APIs & Middleware", Icon: FaServer, color: "#475569" },
-  { label: "Git", Icon: SiGit, color: "#ea580c" },
-  { label: "GitHub", Icon: SiGithub, color: "#1e293b" },
-  { label: "Postman", Icon: SiPostman, color: "#f97316" },
-  { label: "Vercel", Icon: SiVercel, color: "#0f172a" },
-  { label: "Linux", Icon: SiLinux, color: "#ca8a04" },
+  { label: "MongoDB", category: "NoSQL Database", Icon: SiMongodb, color: "#16a34a" },
+  { label: "MySQL / SQL", category: "Relational DB", Icon: SiMysql, color: "#0d9488" },
+  { label: "Redis", category: "Cache & Queues", Icon: SiRedis, color: "#dc2626" },
+  { label: "Docker", category: "Sandboxes & Containers", Icon: SiDocker, color: "#0284c7" },
+  { label: "Git", category: "Version Control", Icon: SiGit, color: "#ea580c" },
+  { label: "GitHub & Actions", category: "CI/CD & Octokit", Icon: SiGithub, color: "#1e293b" },
+  { label: "Postman", category: "API Testing", Icon: SiPostman, color: "#f97316" },
+  { label: "LLM Gateways & RAG", category: "AI Systems", Icon: SiOpenai, color: "#0d9488" },
+  { label: "Scapy Packet Sniffing", category: "Network Telemetry", Icon: FaNetworkWired, color: "#3b82a6" },
+  { label: "OSV.dev & Security", category: "Audit & Fixers", Icon: FaShieldHalved, color: "#7c72ab" },
+  { label: "Linux", category: "Environment & Bash", Icon: SiLinux, color: "#ca8a04" },
+  { label: "Vercel", category: "Deployments", Icon: SiVercel, color: "#0f172a" },
 ];
 
 export default function TechTechnologies() {
@@ -37,14 +33,15 @@ export default function TechTechnologies() {
       <header className="document-header">
         <div>
           <span className="doc-kicker">TECH STACK</span>
-          <h1>AI/ML, Tools &amp; Databases</h1>
+          <h1>Tools, Databases &amp; DevOps</h1>
         </div>
+        <span className="ink-stamp blue">DEVOPS</span>
       </header>
       <p className="lead">
-        Infrastructure, databases, container sandboxes, AI concepts, and developer tooling used across projects.
+        Database systems, container sandboxes, queuing engines, CI/CD tools, and security auditing mechanisms utilized across production and personal projects.
       </p>
       <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-        {items.map(({ label, Icon, color }) => (
+        {items.map(({ label, category, Icon, color }) => (
           <div
             key={label}
             className="flex items-center gap-3 rounded-xl bg-white/95 p-3 md:p-4 border border-wc-border shadow-card hover:border-watercolor-blue/40 hover:-translate-y-0.5 transition-all"
@@ -55,9 +52,14 @@ export default function TechTechnologies() {
             >
               <Icon size={22} />
             </div>
-            <span className="font-cambria font-semibold text-base text-ink-primary">
-              {label}
-            </span>
+            <div className="flex flex-col min-w-0">
+              <span className="font-cambria font-semibold text-sm md:text-base text-ink-primary truncate">
+                {label}
+              </span>
+              <span className="text-[11px] text-ink-muted truncate font-sans">
+                {category}
+              </span>
+            </div>
           </div>
         ))}
       </div>
